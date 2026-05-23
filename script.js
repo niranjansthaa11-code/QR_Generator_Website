@@ -5,6 +5,8 @@ const qrImg = document.querySelector('#og-qr');
 const downloadBtn = document.querySelector('#downlaod-btn');
 const closeBtn = document.querySelector('#close-btn');
 const mainbaksa= document.querySelector('#mainbaksa');
+const waInput = document.querySelector('#wa-input');
+const waBtn = document.querySelector('#wa-genratebtn');
 
 
 
@@ -42,5 +44,18 @@ closeBtn.addEventListener('click' , () => {
     mainbaksa.classList.remove('opacity')
 })
 
-
+// for the whatsapp adding
+waBtn.addEventListener('click', () => {
+    if(!waInput.value){
+        alert('Enter Whatsapp number first');
+    } else{
+        const waUrl='https://wa.me/'+waInput.value;
+        const imgUrl=url + encodeURIComponent(waUrl);
+        qrImg.setAttribute('src',imgUrl);
+        setTimeout(() => {
+            qrPopup.classList.add('reveal');
+            mainbaksa.classList.add('opacity');
+        },1000);
+    }
+})
 
