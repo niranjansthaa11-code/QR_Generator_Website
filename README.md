@@ -5,5 +5,7 @@ How to use it ??
   -you will get your qr 
   -if you wanna downlaod click download and if you wanna close theres a option 
 
+i used the https://goqr.me/api/ for generating the qr
+
 Happy learning... 
 Made with love <3
