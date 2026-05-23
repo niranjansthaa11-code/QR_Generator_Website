@@ -26,6 +26,13 @@ body {
     align-items: center;
     flex-direction: column;
     background: linear-gradient(to right, #000000, #FFDE21, #1565C0);
+    transition: filter 0.5s ease;
+}
+
+
+#mainbaksa.opacity{
+    opacity: 0.2;
+    filter: blur(2px);
 }
 
 .slidebar,
@@ -93,7 +100,7 @@ p {
     cursor: pointer;
     position: relative;
     overflow: hidden;
-    transform: top 0.4s ease;
+    transition: top 0.4s ease;
 }
 
 #genratebtn .text {
@@ -146,11 +153,11 @@ p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 0.2rem;
+    gap: 12px;
     transform: scale(0);
     transition: transform 0.5s ease-in-out,
         opacity 0.5s,
-        bottom 0.5 ease-in-out;
+        bottom 0.5s ease-in-out;
 
 }
 #qr-show.reveal{
@@ -170,6 +177,7 @@ p {
 
 #qr-show h2 {
     font-family: var(--font);
+
 }
 
 #downlaod-btn,
@@ -184,6 +192,8 @@ p {
     border: none;
     cursor: pointer;
     transition: transform 0.2s;
+    font-size: 16px;
+    font-weight: 600;
 
 }
 

@@ -4,6 +4,7 @@ const qrPopup = document.querySelector('#qr-show');
 const qrImg = document.querySelector('#og-qr');
 const downloadBtn = document.querySelector('#downlaod-btn');
 const closeBtn = document.querySelector('#close-btn');
+const mainbaksa= document.querySelector('#mainbaksa');
 
 
 
@@ -16,10 +17,30 @@ genBtn.addEventListener('click', () => {
     } else{
 
     const imgUrl = url + inp.value;
-    qrImg.setAttribute('src', imgUrl); // this gives the new url of the genrated qr
+    qrImg.setAttribute('src', imgUrl); // this gives the new url of the genrated qr for me
     setTimeout(() => {
         qrPopup.classList.add('reveal');
+        mainbaksa.classList.add('opacity')
     }, 1000)}
+});
+
+downloadBtn.addEventListener('click', () => {
+    const imgUrl =url+inp.value;
+    fetch(imgUrl)
+    .then((res) => res.blob()) // blob means binary large objet which can be used create the fie like object comming from api
+    .then((blob)=> {
+        const link =document.createElement('a');
+        link.href =URL.createObjectURL(blob);
+        link.download ='qr.jpg'
+        link.click(); //yelsey chahi auto click garunxa kinaki user le tw pahilai nai click garisakyo feri kina garush
+
+    })
+});
+
+closeBtn.addEventListener('click' , () => {
+    qrPopup.classList.remove('reveal');
+    mainbaksa.classList.remove('opacity')
 })
+
 
 
