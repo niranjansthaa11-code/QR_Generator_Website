@@ -24,7 +24,7 @@ body{
     flex-direction: column;
     background: linear-gradient(to right, #000000, #FFDE21, #1565C0);
 }
-.slidebar{
+.slidebar , .home-container{
     display: flex;
     justify-content: left;
     align-items: center;
@@ -41,5 +41,46 @@ body{
     margin-bottom: 5px;
 }
 .slidebar .text-ko-baksa span {
-    color: blue;
+    color:blue
+}
+.home{
+    height: 200px;
+    width: 50%;
+    background-color: #E6C400 ;
+    box-shadow: 0 5px 10px #FFE137;
+    border-radius: 6px;
+    padding: 11px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.home h2{
+    font-family: var(--font);
+}
+#qr-input{
+    height: 25px;
+    width: 75%;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin:15px 0 20px;
+    background-color: #CFB030 ;
+    padding: 7px;
+    font-size: 15px;
+    font-family: var(--font);
+}
+#genratebtn{
+    height: 35px;
+    width: 85%;
+    background-color: black;
+    border-radius: 5px;
+    font-size: 13px;
+    color: white;
+    font-family: var(--font);
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+#genratebtn:hover{
+    transform: scale(1.03);
 }
