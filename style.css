@@ -1,20 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
-:root{
-    --font: 'Ubuntu','sans-serif';
+:root {
+    --font: 'Ubuntu', 'sans-serif';
 }
-*{
+
+* {
     margin: 0;
     padding: 0;
 }
-body{
+
+body {
     background-color: #FFDE21;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-#mainbaksa{
+
+#mainbaksa {
     height: 100vh;
     width: 100vw;
     background-size: cover;
@@ -24,29 +27,36 @@ body{
     flex-direction: column;
     background: linear-gradient(to right, #000000, #FFDE21, #1565C0);
 }
-.slidebar , .home-container{
+
+.slidebar,
+.home-container {
     display: flex;
     justify-content: left;
     align-items: center;
     flex-direction: row;
 }
+
 .slidebar img {
     width: 130px;
     height: auto;
     margin: 0 20px;
 }
-.slidebar .text-ko-baksa h1 ,p {
+
+.slidebar .text-ko-baksa h1,
+p {
     font-family: var(--font);
     font-weight: 600;
     margin-bottom: 5px;
 }
+
 .slidebar .text-ko-baksa span {
-    color:blue
+    color: blue
 }
-.home{
+
+.home {
     height: 200px;
     width: 50%;
-    background-color: #E6C400 ;
+    background-color: #E6C400;
     box-shadow: 0 5px 10px #FFE137;
     border-radius: 6px;
     padding: 11px;
@@ -55,21 +65,115 @@ body{
     justify-content: center;
     align-items: center;
 }
-.home h2{
+
+.home h2 {
     font-family: var(--font);
 }
-#qr-input{
+
+#qr-input {
     height: 25px;
     width: 75%;
     border-radius: 5px;
     border: 1px solid black;
-    margin:15px 0 20px;
-    background-color: #CFB030 ;
+    margin: 15px 0 20px;
+    background-color: #CFB030;
     padding: 7px;
     font-size: 15px;
     font-family: var(--font);
 }
-#genratebtn{
+
+#genratebtn {
+    height: 35px;
+    width: 85%;
+    background-color: black;
+    border-radius: 5mm;
+    font-family: var(--font);
+    border: 0.5mm solid black;
+    box-shadow: 3px 3px 0 black;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transform: top 0.4s ease;
+}
+
+#genratebtn .text {
+    font-size: 15px;
+    font-family: var(--font);
+    font-weight: 500;
+    align-items: center;
+    color: white;
+    position: relative;
+
+}
+
+#genratebtn .wave {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    background: url(/image/wave.svg);
+    background-size: 200% 100%;
+    top: 90%;
+    left: 0;
+    animation: wave 2s linear infinite;
+    transition: top 0.4s ease;
+
+}
+
+@keyframes wave {
+    from {
+        background-position-x: 0;
+    }
+
+    to {
+        background-position-x: 200%;
+    }
+}
+
+#genratebtn:hover {
+    transform: scale(1.01);
+}
+
+#qr-show {
+    height: 450px;
+    width: 300px;
+    background-color: #E6C400;
+    position: absolute;
+    bottom: 60%;
+    opacity: 0;
+    box-shadow: 0 5px 10px #FFE137;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2rem;
+    transform: scale(0);
+    transition: transform 0.5s ease-in-out,
+        opacity 0.5s,
+        bottom 0.5 ease-in-out;
+
+}
+#qr-show.reveal{
+    transform: scale(1);
+    opacity: 1;
+    bottom: 15%;
+}
+#og-qr{
+    padding: 10px 10px ;
+    width:70%;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    background: white;
+
+}
+
+#qr-show h2 {
+    font-family: var(--font);
+}
+
+#downlaod-btn,
+#close-btn {
     height: 35px;
     width: 85%;
     background-color: black;
@@ -80,7 +184,22 @@ body{
     border: none;
     cursor: pointer;
     transition: transform 0.2s;
+
 }
-#genratebtn:hover{
-    transform: scale(1.03);
+
+#downlaod-btn:hover,
+#close-btn:hover {
+    transform: scale(1.02);
+}
+
+#downlaod-btn {
+    width: 70%;
+    border: 1.5px solid white;
+    margin: 3px, 0;
+}
+
+#close-btn {
+    width: 70%;
+    border: 1.5px solid white;
+    margin: 3px, 0;
 }
