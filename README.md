@@ -29,6 +29,9 @@ This is a simple qr generator website .. you can generate qr for any website lin
 <hr>
 
 <h4>Project Photos :</h4>
+<img src="https://github.com/niranjansthaa11-code/QR_Generator_Website/blob/main/Screenshot%202026-05-30%20141740.png?raw=true" width="600" alt="screenshot 1" />
+<img src="https://github.com/niranjansthaa11-code/QR_Generator_Website/blob/main/Screenshot%202026-05-30%20141753.png?raw=true" width="600" alt="screenshot 2" />
+<img src="https://github.com/niranjansthaa11-code/QR_Generator_Website/blob/main/Screenshot%202026-05-30%20141801.png?raw=true" width="600" alt="screenshot 3" />
 <hr>
 
 Happy learning ...<br>
